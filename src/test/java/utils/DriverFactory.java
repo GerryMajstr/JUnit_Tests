@@ -8,8 +8,19 @@ public class DriverFactory {
     public static WebDriver driver;
 
     public static WebDriver getDriver() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+
+        if (driver == null) {
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+        }
+
         return driver;
+    }
+
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
     }
 }
