@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage {
 
@@ -10,28 +11,20 @@ public class HomePage extends BasePage {
 
     By trackingId = By.name("tracking-id");
     By trackButton = By.cssSelector("button[type='submit']");
+    By acceptCookie = By.id("onetrust-accept-btn-handler");
 
     public void enterTrackingId(String id) {
-        driver.findElement(trackingId).sendKeys(id);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(trackingId)).sendKeys(id);
         System.out.println("Entering tracking ID: " + id);
     }
 
     public void submitTrackingId() {
-        driver.findElement(trackButton).click();
+        wait.until(ExpectedConditions.elementToBeClickable(trackButton)).click();
     }
 
     public void acceptCookies() {
 
         driver.get("https://www.dhl.com/cz-cs/home.html");
-
-        driver.manage().addCookie(
-                new Cookie("OptanonConsent", "isIABGlobal=false")
-        );
-
-        driver.manage().addCookie(
-                new Cookie("OptanonAlertBoxClosed", "true")
-        );
-
-        driver.navigate().refresh();
+        wait.until(ExpectedConditions.elementToBeClickable(acceptCookie)).click();
     }
 }
