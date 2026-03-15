@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "firstName": "Zdenek",
+      "lastName": "Gerhard",
+      "zip": "75301",
+      "city": "Hranice",
+      "address": "Skleny kopec 1565",
+      "comments": "Just trying to play with cucumber and JUnit",
+      "phone": "731831646",
+      "email": "zdenekgerhard15@seznam.cz",
+      "company": "ZdenekGerhard"
+    },
+    {
+      "firstName": "xxx",
+      "lastName": "yyy",
+      "zip": "zzz",
+      "city": "qqq",
+      "address": "www",
+      "comments": "Random text",
+      "phone": "123123123",
+      "email": "aa@aa.com",
+      "company": "company"
+    },
+    {
+      "firstName": "ppp",
+      "lastName": "kkk",
+      "zip": "lll",
+      "city": "uuu",
+      "address": "ttt",
+      "comments": "Testing is fun",
+      "phone": "321321321",
+      "email": "bb@cc.com",
+      "company": "DHL"
+    }
+  ]
+}

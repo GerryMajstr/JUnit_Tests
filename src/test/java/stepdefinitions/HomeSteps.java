@@ -36,4 +36,19 @@ public class HomeSteps {
         assert actualId.equals(trackingIds.get(index));
         System.out.println("Actual ID: " + actualId + " and Expected ID: " + trackingIds.get(index));
     }
+
+    @Then("user clicks on book online option")
+    public void navigateToBookOnline() {
+        homePage.selectBookOnline();
+    }
+
+    @When("user clicks on shipping options button")
+    public void navigateToShippingOptions() {
+        homePage.clickShippingOptionsButton();
+    }
+
+    @When("user navigate to express page")
+    public void navigateToExpressPage() {
+        homePage.navigateToExpress();
+    }
 }
