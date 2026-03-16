@@ -15,7 +15,7 @@ public class BookOnlinePage extends BasePage{
     By continueButton = By.cssSelector("button[type='submit']");
     By withDocuments = By.xpath("//input[@id='shipmentType-documents']");
     By withoutDocuments = By.xpath("//input[@id='shipmentType-non-documents']");
-    By weight = By.id("weight-0");
+    By weight = By.id("weight-01212");
     By length = By.id("length-0");
     By width = By.id("width-0");
     By height = By.id("height-0");
